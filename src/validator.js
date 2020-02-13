@@ -31,7 +31,7 @@ export class Validator {
             const value = input[fieldName];
             const type = types[fieldType];
 
-            if (!input.hasOwnProperty(fieldName)) {
+            if (!type || !input.hasOwnProperty(fieldName)) {
                 return false;
             }
 

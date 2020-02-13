@@ -28,12 +28,16 @@ export class Validator {
      */
     validate(input) {
         return Object.entries(this.schema).every(([fieldName, fieldType]) => {
-            const value = input[fieldName];
-            const type = types[fieldType];
-
-            if (!type || !input.hasOwnProperty(fieldName)) {
+            if (
+                !input ||
+                !input.hasOwnProperty(fieldName) ||
+                !types.hasOwnProperty(fieldType)
+            ) {
                 return false;
             }
+
+            const value = input[fieldName];
+            const type = types[fieldType];
 
             return value.constructor === type;
         });

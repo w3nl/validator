@@ -19,8 +19,8 @@
     "homepage": "https://github.com/w3nl/validator#readme",
     "devDependencies": {
         "@babel/core": "^7.8.4",
-        "@babel/preset-env": "^7.8.4",
-        "@babel/eslint-parser": "^7.11.0",
+        "@babel/preset-env": "^8.0.0",
+        "@babel/eslint-parser": "^8.0.0",
         "babel-jest": "^25.1.0",
         "eslint": "^6.6.0",
         "eslint-config-prettier": "^10.0.0",
